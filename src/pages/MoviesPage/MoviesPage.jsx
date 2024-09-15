@@ -1,9 +1,9 @@
-
+import Filter from "../../components/Filter/Filter";
 
 const MoviesPage = () => { 
 
     return (
-        <h1>Movies Page</h1>
+        <Filter />
     );
 }
  
