@@ -9,14 +9,27 @@ const options = {
   }
 };
 export const fetchTrendingMovies = async () => { 
-   const url = 'trending/movie/day?language=en-US';
-   const response = await axios.get(url, options);
-   return response.data;
+  const url = 'trending/movie/day?language=en-US';
+  const response = await axios.get(url, options);
+  return response.data.results;
 }
  
-export const fetchPost = async (id) => { 
-  const {data} = await axios.get(`/post/${id}`);
+export const fetchMovie = async (id) => { 
+  const url = `movie/${id}`;
+  const {data} = await axios.get(url, options);
   return data;
+}
+
+export const fetchMovieCast = async (id) => { 
+  const url = `movie/${id}/credits`;
+  const {data} = await axios.get(url, options);
+  return data.cast;
+}
+
+export const fetchMovieReviews = async (id) => { 
+  const url = `movie/${id}/reviews`;
+  const {data} = await axios.get(url, options);
+  return data.results;
 }
  
 
