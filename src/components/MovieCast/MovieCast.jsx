@@ -6,6 +6,7 @@ import { useState } from "react";
 import { fetchMovieCast } from "../../api/movie-search-api";
 import Error from "../../components/Error/Error";
 import Loading from "../../components/Loading/Loading";
+import styles from "./MovieCast.module.css"
 
 
 const MovieCast = () => { 
@@ -43,11 +44,11 @@ const MovieCast = () => {
             {error && <Error />}
             {cast && (
                 <>
-                    <ul>                      
+                    <ul className={styles.castList}>                      
                            
                         {cast.map((cast) => 
                             <ul key={cast.id}>
-                                <img src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} alt={cast.name} />
+                                <img className={styles.img} src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} alt={cast.name} />
                                 <li>{cast.name}</li>
                                 <li>Character: {cast.character}</li>
                                 </ul>

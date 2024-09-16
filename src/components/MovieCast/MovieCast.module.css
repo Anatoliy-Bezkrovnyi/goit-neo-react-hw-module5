@@ -1,0 +1,12 @@
+.castList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin-left: 10px;
+}
+
+.img {
+  width: 100px;
+  height: 150px;
+}

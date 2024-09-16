@@ -2,11 +2,9 @@
 import './App.css'
 import { Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
-//import HomePage from "./pages/HomePage/HomePage";
-//import PostPage from "./pages/PostPage/PostPage";
-//import PostDetails from "./pages/PostDetails/PostDetails";
 import { lazy, Suspense } from "react";
 import Loading from "./components/Loading/Loading";
+import styles from "./App.module.css"
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'))
 const MoviesPage = lazy(() => import('./pages/MoviesPage/MoviesPage'))
@@ -18,7 +16,7 @@ const App = () => {
   
 
   return (
-    <div>
+    <div className={styles.app}>
       <Navigation/>
       <Suspense fallback={<Loading/>}>
       

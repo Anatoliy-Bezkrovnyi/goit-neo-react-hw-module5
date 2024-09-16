@@ -4,6 +4,7 @@ import { useState } from "react";
 import { fetchMovieReviews } from "../../api/movie-search-api";
 import Error from "../../components/Error/Error";
 import Loading from "../../components/Loading/Loading";
+import styles from "./MovieReview.module.css"
 
 
 const MovieReview = () => { 
@@ -42,12 +43,12 @@ const MovieReview = () => {
             {error && <Error />}
             {reviews.length > 0 ? (
                 <>
-                    <ul>                      
+                    <ul className={styles.listReviews}>                      
                            
                         {reviews.map((review) => 
-                            <ul key={review.id}>
+                            <ul key={review.id} className={styles.review}>
                                 
-                                <li>Author: {review.author}</li>
+                                <li className={styles.reviewHeader}>Author: {review.author}</li>
                                 <li>{review.content}</li>
                                 </ul>
                         )}                        

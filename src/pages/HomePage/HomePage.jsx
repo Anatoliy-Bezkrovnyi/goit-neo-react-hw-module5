@@ -3,6 +3,7 @@ import { fetchTrendingMovies } from "../../api/movie-search-api";
 import Error from "../../components/Error/Error";
 import Loading from "../../components/Loading/Loading";
 import MovieList from "../../components/MovieList/MovieList";
+import styles from "./HomePage.module.css"
 
 
 
@@ -37,7 +38,7 @@ const HomePage = () => {
         <div>
             {isLoading && <Loading/>}
             {error && <Error />} 
-            <h1>Trending today</h1>
+            <h1 className={styles.title}>Trending today</h1>
             {movies.length > 0 && <MovieList movies={movies}/>}
         </div>
     )
