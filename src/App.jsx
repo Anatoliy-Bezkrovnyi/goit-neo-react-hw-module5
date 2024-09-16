@@ -1,7 +1,7 @@
 
 import './App.css'
 import { Route, Routes } from "react-router-dom";
-import Navigation from "./components/Navigation/navigation";
+import Navigation from "./components/Navigation/Navigation";
 //import HomePage from "./pages/HomePage/HomePage";
 //import PostPage from "./pages/PostPage/PostPage";
 //import PostDetails from "./pages/PostDetails/PostDetails";

@@ -31,6 +31,12 @@ export const fetchMovieReviews = async (id) => {
   const {data} = await axios.get(url, options);
   return data.results;
 }
+
+export const searchMovie = async (params) => { 
+  const url = 'search/movie';
+  const { data } = await axios.get(url, { ...options, params });  
+  return data.results;
+}
  
 
 
